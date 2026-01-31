@@ -1,6 +1,9 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-one: #050E3C;
+  --color-two: #00347c;
+  --color-three: #DC0000;
+  --color-four: #FF3838;
+  --transition: 300ms;
 }
 
 * {
@@ -22,4 +25,20 @@ ul {
   max-width: 900px;
   margin: auto;
   background-color: rgb(209, 234, 255);
+  transform: translateY(60px);
+  min-height: calc(100vh - 60px);
+  max-height: calc(100vh - 60px);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+button {
+  cursor: pointer;
+  min-width: 50px;
+  background-color: #ddd;
+  padding: 8px 15px;
+}
+
+button:hover {
+  border-color: #fff;
 }

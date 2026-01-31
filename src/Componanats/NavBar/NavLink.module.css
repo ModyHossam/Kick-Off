@@ -1,0 +1,6 @@
+.active {
+    border-bottom: 1px #fff solid;
+    padding: 3px;
+    transition: var(--transition);
+    border-color: var(--color-four);
+}

@@ -1,0 +1,10 @@
+.list {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.3ms;
+}
+
+.hide {
+    visibility: hidden;
+    opacity: 0;
+}
