@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Button from "@/Componanats/UiElements/Button"
 
 import classes from "./page.module.css"
 
@@ -29,13 +30,20 @@ export default function MatchesPage() {
             <h2>Matches Page</h2>
             <div>
                 <p>{ counter }</p>
-                <button onClick={increaseCounter}>+</button>
-                <button onClick={decreaseCounter}>-</button>
-                <button onClick={resetCounter}>reset</button>
+                <section className={classes["btns-section"]}>
+                    <Button onClick={increaseCounter} disabled={counter >= 10}>+</Button>
+                <Button onClick={decreaseCounter} outline disabled={counter < 0}>-</Button>
+                <Button onClick={resetCounter} danger disabled={counter === 0}>reset</Button>
+                </section>
             </div>
 
+            <br />
+            <hr />
+            <br />
+
             <div>
-                <button onClick={toggle}>{showList ? "Hide" : "Show"} menu</button>
+                <Button onClick={toggle} outline={showList}>{showList ? "Hide" : "Show"} menu</Button>
+                
                 <ul className={`${classes["list"]} ${!showList ? classes["hide"] : ""}`}>
                     <li>ITEM 1</li>
                     <li>ITEM 2</li>

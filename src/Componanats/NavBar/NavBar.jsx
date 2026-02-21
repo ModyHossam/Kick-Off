@@ -22,7 +22,7 @@ export default function Navigation() {
                 <NavigationLink href="/matches" text="Matches"/>
                 <NavigationLink href="/news" text="News"/>
                 <NavigationLink href="/championships" text="Championships"/>
-                <NavigationLink href="/contacts" text="Contact Us"/>
+                <NavigationLink href="/contacts" text="Contacts"/>
             </ul>
 
             <button onClick={toggle}  className = {styles["menuButton"]}>

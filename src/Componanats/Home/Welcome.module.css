@@ -1,0 +1,53 @@
+.welcome {
+    display: flex;
+}
+
+.text p {
+    position: relative;
+    z-index: 10;
+    text-transform: capitalize;
+}
+
+.hello {
+    color: var(--color-two);
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 45px;
+    color: var(--color-one);
+    background-color: #fff;
+    opacity: 0.5;
+    padding: 10px;
+}
+
+.lorem {
+    color: grey;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.btns {
+    margin-top: 35px;
+    display: flex;
+    gap: 10px;
+}
+
+/* .matches-btn {
+    width: 100px;
+} */
+
+.img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 20px;
+
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
