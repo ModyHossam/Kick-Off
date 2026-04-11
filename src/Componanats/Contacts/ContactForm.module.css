@@ -1,0 +1,40 @@
+.contact-form {
+    border: 2px solid var(--color-two);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.input-form label {
+    color: var(--color-two);
+}
+
+.input-form input {
+    padding: 5px 10px;
+    outline: none;
+    border: 2px solid var(--color-two);
+    border-radius: 3px;
+    
+}
+.contact-form h3 {
+    color: var(--color-one);
+    text-align: center;
+    font-size: 26px;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.error {
+    color: red;
+    text-align: right;
+    height: 5px;
+}
