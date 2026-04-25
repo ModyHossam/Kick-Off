@@ -1,0 +1,19 @@
+.results {
+    display: flex;
+}
+
+.search input {
+    padding: 8px 20px;
+    border: 2px solid var(--color-one);
+    border-radius: 5px;
+    transition: 0.3;
+}
+
+.search input:focus {
+    outline: none;
+    box-shadow: 0px 0px 6px var(--color-two);
+}
+
+.table {
+    
+}
