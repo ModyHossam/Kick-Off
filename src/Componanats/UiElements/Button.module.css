@@ -1,35 +1,57 @@
 .button {
-    cursor: pointer;
-    padding: 8px 15px;
-    background-color: var(--color-one);
-    color: #fff;
-    border: 1px solid var(--color-one);
-    outline: none;
-    transition: 0.3s;
-    border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 15px;
+  background-color: var(--color-one);
+  color: #ddd;
+  border: 2px solid #ddd;
+  transition: var(--transition);
+  border-radius: 5px;
 
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #777;
 }
 
 .button:hover {
-    opacity: 0.85;
+  background-color: transparent;
+  color: var(--color-one);
+  border: 2px solid var(--color-one);
+}
+
+.button:disabled:hover {
+  opacity: 1;
+  cursor: not-allowed;
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #777;
 }
 
 .danger {
-    background-color: red;
+  background-color: var(--red);
+  border-color: var(--red);
 }
 
 .outline {
-    background-color: transparent;
-    outline: 1px solid var(--color-one);
-    transition: var(--transition);
-    color: var(--color-one);
+  background-color: var(--color-three);
+  border-color: var(--color-one);
+  color: var(--color-one);
 }
 
 .outline:hover {
-    opacity: 1;
-    background-color: var(--color-one);
-    color: #fff;
+  opacity: 1;
+  background-color: var(--color-one);
+  color: var(--color-three);
+}
+
+.outline:disabled:hover {
+  background-color: #ccc;
+  color: #777;
 }

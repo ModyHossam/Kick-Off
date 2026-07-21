@@ -1,0 +1,49 @@
+:root {
+  --color-one: #050E3C;
+  --color-two: #00347c;
+  --color-three: #DC0000;
+  --color-four: #FF3838;
+  --transition: 300ms;
+}
+
+.h3 {
+    color: #00347c;
+    font-size: 36px;
+    text-align: center;
+    margin: 20px;
+}
+
+.form {
+    width: 400px;
+    margin: 20px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.input {
+    background-color: #3078dd;
+}
+
+.img {
+    border-radius: 50%;
+}
+.btns {
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  height: 20px;
+  gap: 5px;
+  margin: 30px;
+}
+
+.logBtn {
+    height: 40px;
+    width: 100px;
+}
+
+.inputs {
+    border: 2px solid #050E3C;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 173, 173, 0.127);
+    box-shadow: 1px 1px 5px;
+}

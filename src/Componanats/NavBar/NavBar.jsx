@@ -23,6 +23,8 @@ export default function Navigation() {
                 <NavigationLink href="/news" text="News"/>
                 <NavigationLink href="/championships" text="Championships"/>
                 <NavigationLink href="/contacts" text="Contacts"/>
+                <NavigationLink href="/sign-up" text="Sign Up"/>
+                <NavigationLink href="/log-in" text="Log In"/>
             </ul>
 
             <button onClick={toggle}  className = {styles["menuButton"]}>
