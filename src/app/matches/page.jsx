@@ -1,57 +1,48 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Button from "@/Componanats/UiElements/Button"
+import { useReducer } from "react";
+import Button from "@/Componanats/UiElements/Button";
 
-import classes from "./page.module.css"
+const initialState = {
+  score: 0,
+  lives: 3,
+  level: 1,
+};
 
-export default function MatchesPage() {
-    const [counter, setCounter] = useState(0);
-    const [showList, setShowList] = useState(false)
+const reducer = (state, action) => {
+  const { type, amount } = action;
+  switch (type) {
+    case "ADD_SCORE":
+      return { ...state, score: state.score + amount , level: state.level +1};
+    case "LOSE_SCORE":
+      return { ...state, score: Math.max(0, state.score - amount), lives: state.score === amount ? state.lives -1 : state.score === 0 ? state.lives : state.lives };
 
-    const increaseCounter = () => {
-        if (counter >= 10) return;
-        setCounter(counter + 1)
-    }
+    default:
+      return state;
+  }
+};
 
-    const decreaseCounter = () => {
-        if (counter <= 0) {return};
-        setCounter(counter - 1)
-    }
+const About = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-    const resetCounter = () => {
-        setCounter(0)
-    }
+  const addScore = () => dispatch({ type: "ADD_SCORE", amount: 10 });
+  const loseScore = () => dispatch({ type: "LOSE_SCORE", amount: 10 });
 
-    const toggle = () => setShowList(!showList)
+  return (
+    <div>
+      <h2>About</h2>
+      <p>
+        Score: {state.score} Lives: {state.lives} Level: {state.level}
+      </p>
 
-    return (
-        <section>
-            <h2>Matches Page</h2>
-            <div>
-                <p>{ counter }</p>
-                <section className={classes["btns-section"]}>
-                    <Button onClick={increaseCounter} disabled={counter >= 10}>+</Button>
-                <Button onClick={decreaseCounter} outline disabled={counter < 0}>-</Button>
-                <Button onClick={resetCounter} danger disabled={counter === 0}>reset</Button>
-                </section>
-            </div>
+      <section>
+        <Button onClick={addScore}>Score +</Button>
+        <Button onClick={loseScore} danger>
+          Score -
+        </Button>
+      </section>
+    </div>
+  );
+};
 
-            <br />
-            <hr />
-            <br />
-
-            <div>
-                <Button onClick={toggle} outline={showList}>{showList ? "Hide" : "Show"} menu</Button>
-                
-                <ul className={`${classes["list"]} ${!showList ? classes["hide"] : ""}`}>
-                    <li>ITEM 1</li>
-                    <li>ITEM 2</li>
-                    <li>ITEM 3</li>
-                    <li>ITEM 4</li>
-                </ul>
-            </div>
-        </section>
-    )
-}
-
+export default About;
